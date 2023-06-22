@@ -6,7 +6,7 @@ import 'models/album.dart';
 
 class GeradorAlbuns {
  // Gerar estilo musical
- String _gerarEstilo() {
+ static String _gerarEstilo() {
    var random = Random().nextInt(7);
    switch (random) {
      case 0:
@@ -28,7 +28,7 @@ class GeradorAlbuns {
    }
   }
 
-  String _gerarCaracteristica() {
+  static String _gerarCaracteristica() {
     var random = Random().nextInt(9);
     switch (random) {
       case 0:
@@ -54,7 +54,7 @@ class GeradorAlbuns {
     }
   }
 
-  Album gerarAlbum(id) {
+  static Album gerarAlbum(id) {
    return Album(
      id,
      "${_gerarEstilo()} ${_gerarCaracteristica()}",
